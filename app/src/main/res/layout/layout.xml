@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="#ac4">
+
+    <TextView
+        android:id="@+id/userNameView"
+        android:text="User"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:id="@+id/messageView"
+        android:layout_marginVertical="20dp"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="message"
+        android:layout_below="@id/userNameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginHorizontal="5dp"
+        android:textAlignment="viewEnd"
+        android:id="@+id/timeView"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="11:18pm"
+        android:layout_below="@id/messageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#80deea">
+
+    <ImageButton
+        android:id="@+id/branchesBtn"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@id/forestsBtn"
+        android:background="@color/fui_transparent"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:src="@drawable/branches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_alignParentLeft="true"
+        android:id="@+id/forestsBtn"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_marginLeft="25dp"
+        android:background="@color/fui_transparent"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:src="@drawable/forests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_alignParentTop="true"
+        android:id="@+id/treeLabelLogo"
+        android:layout_marginTop="15dp"
+        android:scaleY="0.5"
+        android:scaleX="0.5"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tree_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No leaves found!"
+        android:id="@+id/noUsersText"
+        android:visibility="gone"/>
+<TextView
+    android:layout_below="@id/treeLabelLogo"
+    android:padding="5dp"
+    android:textColor="#000000"
+    android:textAlignment="center"
+    android:text="Your fellow leaves"
+    android:id="@+id/leavesTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <!-- A RecyclerView with some commonly used attributes -->
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/leavesTitle"
+        android:id="@+id/usersList"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Branches"
+    android:background="#80deea">
+
+    <ImageButton
+        android:layout_toLeftOf="@id/settingsBtn"
+        android:id="@+id/addBranchBtn"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_marginRight="35dp"
+        android:background="@color/fui_transparent"
+        android:src="@drawable/add"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/settingsBtn"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/fui_transparent"
+        android:src="@drawable/settings"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/forestsBtn"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/fui_transparent"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:src="@drawable/forests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_toRightOf="@id/forestsBtn"
+        android:id="@+id/leavesBtn"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_marginLeft="35dp"
+        android:background="@color/fui_transparent"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:src="@drawable/leaves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_alignParentTop="true"
+        android:id="@+id/treeLabelLogo"
+        android:layout_marginTop="15dp"
+        android:scaleY="0.5"
+        android:scaleX="0.5"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tree_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No leaves found!"
+        android:id="@+id/noUsersText"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_below="@id/treeLabelLogo"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:text="Branches"
+        android:id="@+id/branchesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!-- A RecyclerView with some commonly used attributes -->
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/branchesTitle"
+        android:id="@+id/branchesList"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/noBranchesLabel"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:text="You aren't in any branches!\n Why not create your own."
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

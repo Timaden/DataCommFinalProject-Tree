@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/msgBg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#a0deea"
+    android:paddingHorizontal="15dp">
+
+
+    <TextView
+        android:layout_marginVertical="5dp"
+        android:id="@+id/avatar"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="User name"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/avatar"
+        android:layout_marginVertical="20dp"
+        android:id="@+id/message"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="How are you today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@id/message"
+        android:textAlignment="textEnd"
+        android:text="11:03pm"
+        android:id="@+id/msgTimeStamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"/>
+    <View
+        android:layout_marginVertical="15dp"
+        android:background="#55000000"
+        android:layout_below="@id/msgTimeStamp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</RelativeLayout>

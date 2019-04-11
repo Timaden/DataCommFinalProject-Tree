@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="#80deea">
+    <ImageButton
+        android:id="@+id/treeLabelLogo"
+        android:layout_marginTop="75dp"
+        android:scaleY="0.7"
+        android:scaleX="0.7"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tree_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_below="@id/treeLabelLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="50dp"
+                android:id="@+id/lEmailLabel"
+                android:text="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"/>
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:hint="email"
+                android:layout_marginHorizontal="15dp"
+                android:padding="7dp"
+                android:background="#f7f7f7"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/lEmailLabel"
+                android:id="@+id/lEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="50dp"
+                android:id="@+id/lPasswordLabel"
+                android:text="Password"
+                android:layout_below="@id/lEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:inputType="textPassword"
+                android:layout_marginHorizontal="15dp"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:hint="password"
+                android:padding="7dp"
+                android:background="#f7f7f7"
+                android:layout_below="@id/lPasswordLabel"
+                android:id="@+id/lPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@id/lPasswordInput"
+                android:text="forgot you password?"
+                android:id="@+id/forgotPasswordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:id="@+id/loginFailed"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/noAcctLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:textAllCaps="false"
+                android:text="Login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/lPasswordInput"
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/noAcctLabel"
+                android:textColor="#000000"
+                android:clickable="true"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/login"
+                android:text="Don't have an account?"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

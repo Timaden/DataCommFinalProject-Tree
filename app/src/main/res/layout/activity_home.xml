@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:background="#80deea">
+
+    <ImageButton
+        android:id="@+id/leavesBtn"
+        android:layout_marginLeft="25dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:background="@color/fui_transparent"
+        android:src="@drawable/home"
+        android:layout_alignTop="@id/treeLabelLogo"
+        android:layout_alignBottom="@id/treeLabelLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:layout_alignParentTop="true"
+        android:id="@+id/treeLabelLogo"
+        android:layout_marginTop="15dp"
+        android:scaleY="0.5"
+        android:scaleX="0.5"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tree_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:padding="5dp"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:text="Chatroom"
+        android:id="@+id/chatRoomNameView"
+        android:layout_below="@id/treeLabelLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- A RecyclerView with some commonly used attributes -->
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/chatRoomNameView"
+        android:layout_above="@id/userMsg"
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="sign out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signoutBtn"/>
+
+
+    <EditText
+
+        android:id="@+id/userMsg"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:hint="Enter message"
+        android:background="#f7f7f7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_alignTop="@id/userMsg"
+        android:layout_alignRight="@id/userMsg"
+        android:layout_alignBottom="@id/userMsg"
+        android:id="@+id/send"
+        android:layout_weight="2"
+        android:text="send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
